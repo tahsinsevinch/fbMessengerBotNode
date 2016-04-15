@@ -10,13 +10,13 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-var token = "EAAYqGH5MRiEBAEGpapav2eYuKpM7fON2DJgUMeNSxTVPpWzFqtzqoSl14IxZCTds0Ly7RlHyGrgZBhLKKgMqsvQFBv7bcGzsAkG72FP84posemiL7sIABZBuczvixAXdMW5HyBYGSRcCmj8ZC7KJZBpOLZCM73t5xzNteNAZCgYlAZDZD";
+var token = "page acess token";
 app.get('/', function(req, res) {
 console.log('ok');
 res.send('OK');
 });
 app.get('/webhook/', function (req, res) {
-  if (req.query['hub.verify_token'] ==="Plasenta123" ) {
+  if (req.query['hub.verify_token'] ==="verify token" ) {
     res.send(req.query['hub.challenge']);
   }
   res.send('Error, wrong validation token');
